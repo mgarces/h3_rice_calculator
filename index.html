@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>🍚 Calculadora Arroz H3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/style.css">
+  <!-- Font Awesome for Instagram icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="lang-switch">
+      <button id="langPT" onclick="setLang('pt')" data-en="PT" data-pt="PT">PT</button>
+      <button id="langEN" onclick="setLang('en')" data-en="EN" data-pt="EN">EN</button>
+    </div>
+    <h1 data-en="Rice Calculator" data-pt="Calculadora de Arroz">🍚 Calculadora de Arroz</h1>
+    <label for="riceInput" data-en="Enter rice amount (grams):" data-pt="Insere a quantidade de arroz (gramas):">Insere a quantidade de arroz (gramas):</label>
+    <div class="input-row">
+      <img src="static/images/rice_small.png" alt="Rice" class="rice-icon">
+      <input type="number" id="riceInput" min="1" max="5000" placeholder="100">
+    </div>
+    <div id="warning" class="warning hidden"
+      data-en="Maximum allowed is 5000 grams per calculation."
+      data-pt="O máximo permitido é 5000 gramas por cálculo.">
+      O máximo permitido é 5000 gramas por cálculo.
+    </div>
+    <button onclick="calculate()" data-en="Calculate" data-pt="Calcular">Calcular</button>
+    <div id="results" class="results hidden">
+      <div id="results-list" class="results-list">
+        <!-- Results will be inserted here by JS -->
+      </div>
+    </div>
+    <div class="explanation">
+      <strong data-en="Formulas:" data-pt="Fórmulas:">Fórmulas:</strong><br>
+      <span data-en="Water = rice × 1.53 (1.3× volume, density ≈ 0.85 g/mL)" data-pt="Água = arroz × 1.53 (1.3× volume, densidade ≈ 0.85 g/mL)">Água = arroz × 1.53 (1.3× volume, densidade ≈ 0.85 g/mL)</span><br>
+      <span data-en="Butter = rice × (6.8 / 90)" data-pt="Manteiga = arroz × (6.8 / 90)">Manteiga = arroz × (6.8 / 90)</span><br>
+      <span data-en="Oil = rice × (2.75 / 90)" data-pt="Óleo = arroz × (2.75 / 90)">Óleo = arroz × (2.75 / 90)</span>
+    </div>
+    <div class="reference">
+      <span data-en="Original recipe by " data-pt="Receita original por ">Receita original por </span>
+      <a href="https://www.instagram.com/p/DLKzJD9tUL3/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+        <i class="fab fa-instagram" style="font-size: 1.2em; vertical-align: middle;"></i>
+        <span style="vertical-align: middle;">@falsotacho</span>
+      </a>
+    </div>
+    <footer class="site-footer"
+      data-en='This calculator was inspired by a recipe from H3. I am not affiliated with them; I created this site simply to make it easier to calculate the ingredients I saw on Instagram. <p><br>Created by <a href="https://www.linkedin.com/in/mgarces/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Marco Garcês</a> — © 2025'
+      data-pt='Esta calculadora foi inspirada numa receita da H3. Não tenho qualquer ligação com eles; criei este site apenas para facilitar o cálculo dos ingredientes que vi no Instagram. <p><br>Criado por <a href="https://www.linkedin.com/in/mgarces/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Marco Garcês</a> — © 2025'
+      style="margin-top: 2em; text-align: center; font-size: 0.95em; color: #666;">
+      Esta calculadora foi inspirada numa receita da H3. Não tenho qualquer ligação com eles; criei este site apenas para facilitar o cálculo dos ingredientes que vi no Instagram. <br>Criado por <a href="https://www.linkedin.com/in/mgarces/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Marco Garcês</a> — © 2025
+    </footer>
+  </div>
+  <script src="static/script.js"></script>
+</body>
+</html>
